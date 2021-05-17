@@ -15,7 +15,7 @@ def cargaDataSet(path, nameColumns):
     print(df.score.value_counts())
     return df
 
-def reparacionDataSet(df, columna, identificador):
+def sereparacionDataSet(df, columna, identificador):
     is_score = df.loc[:, columna] == identificador
     df_grupo = df.loc[is_score]
     print("Tamaño SubDataSet: ", df_grupo.shape)
@@ -105,8 +105,8 @@ if __name__ == "__main__":
     cont = 0
     
     for dataset in datasets:
-        dataset = reparacionDataSet(df, 'score', cont+1)
-        process = multiprocessing.Process                  (target=obtenerValoresPorGrupos, args=(diccionarios[cont],dataset))
+        dataset = sereparacionDataSet(df, 'score', cont+1)
+        process = multiprocessing.Process(target=obtenerValoresPorGrupos, args=(diccionarios[cont],dataset))
         jobs.append(process)
         cont = cont+1
         
