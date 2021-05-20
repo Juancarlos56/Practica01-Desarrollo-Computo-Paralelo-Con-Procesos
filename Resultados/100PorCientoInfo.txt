@@ -1,0 +1,56 @@
+PS C:\Users\Juan\Documents\ComputacionParalela\WorkSpace-ProgramacionParalela-Python\Practica01-Amazon-Review> python amazon_review.py
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\Juan\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+(2999924, 3)
+5    599995
+1    599988
+4    599987
+3    599977
+2    599977
+Name: score, dtype: int64
+**********************PROCESOS**************************
+-------------------- Dataset Grupo 1 ----TOP 20----------------------------
+ [('book', 199987), ('one', 180073), ('would', 163283), ('like', 152458), ('get', 121335), ('even', 108138), ('it.', 88545), ('buy', 86469), ('good', 86052), ('time', 78542), ('read', 73865), ('bought', 73831), ('first', 71316), ('really', 70556), ('movie', 69871), ('could', 69790), ('product', 66947), ('-', 65330), ('much', 65229), ('never', 63891)]
+-------------------- Dataset Grupo 5 ----TOP 20----------------------------
+ [('book', 229940), ('one', 180089), ('great', 170326), ('like', 132956), ('love', 106898), ('good', 97408), ('read', 96964), ('would', 90506), ('get', 86445), ('really', 84252), ('best', 78713), ('it.', 75618), ('first', 67708), ('well', 66328), ('time', 61279), ('also', 61206), ('much', 59402), ('even', 59366), ('many', 56313), ('recommend', 55904)]
+-------------------- Dataset Grupo 2 ----TOP 20----------------------------
+ [('book', 241755), ('like', 187540), ('one', 182122), ('would', 172741), ('good', 128499), ('get', 122901), ('really', 108951), ('much', 105264), ('it.', 88916), ('even', 85538), ('read', 80577), ('first', 80253), ('time', 71498), ('better', 69061), ('could', 68802), ('great', 67421), ('movie', 67186), ('bought', 66536), ('-', 
+65538), ("i'm", 63009)]
+-------------------- Dataset Grupo 3 ----TOP 20----------------------------
+ [('book', 233852), ('like', 188405), ('good', 175751), ('one', 169709), ('would', 160914), ('get', 113521), ('really', 110702), ('much', 99378), ('great', 88764), ('read', 81006), ('little', 79291), ('it.', 76648), ('first', 76556), ('think', 68161), ('movie', 67620), ('better', 65177), ('time', 63641), ('could', 63539), ('-', 
+62637), ('still', 61062)]
+-------------------- Dataset Grupo 4 ----TOP 20----------------------------
+ [('book', 221761), ('good', 177737), ('like', 172000), ('one', 169991), ('great', 150161), ('would', 128765), ('really', 105017), ('get', 97690), ('read', 82247), ('little', 81152), ('well', 75484), ('it.', 75406), ('first', 72667), ('much', 71752), ('love', 65393), ('also', 63693), ('time', 61254), ('still', 60604), ('-', 59728), ('think', 59194)]
+Count processing complete.
+multiprocesses time= 212.2576186656952
+
+***********************SECUENCIAL***************************
+(2999924, 3)
+5    599995
+1    599988
+4    599987
+3    599977
+2    599977
+Name: score, dtype: int64
+amazon_review.py:41: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  datasetGrupo["reviewText"] = datasetGrupo["reviewText"].apply(lambda x: ' '.join([word for word in x.split() if word not in (stop)]))
+-------------------- Dataset Grupo 1 ----TOP 20----------------------------
+ [('book', 199987), ('one', 180073), ('would', 163283), ('like', 152458), ('get', 121335), ('even', 108138), ('it.', 88545), ('buy', 86469), ('good', 86052), ('time', 78542), ('read', 73865), ('bought', 73831), ('first', 71316), ('really', 70556), ('movie', 69871), ('could', 69790), ('product', 66947), ('-', 65330), ('much', 65229), ('never', 63891)]
+-------------------- Dataset Grupo 2 ----TOP 20----------------------------
+ [('book', 241755), ('like', 187540), ('one', 182122), ('would', 172741), ('good', 128499), ('get', 122901), ('really', 108951), ('much', 105264), ('it.', 88916), ('even', 85538), ('read', 80577), ('first', 80253), ('time', 71498), ('better', 69061), ('could', 68802), ('great', 67421), ('movie', 67186), ('bought', 66536), ('-', 
+65538), ('two', 59388)]
+-------------------- Dataset Grupo 3 ----TOP 20----------------------------
+ [('book', 233852), ('like', 188405), ('good', 175751), ('one', 169709), ('would', 160914), ('get', 113521), ('really', 110702), ('much', 99378), ('great', 88764), ('read', 81006), ('little', 79291), ('it.', 76648), ('first', 76556), ('think', 68161), ('movie', 67620), ('better', 65177), ('time', 63641), ('could', 63539), ('-', 
+62637), ('still', 61062)]
+-------------------- Dataset Grupo 4 ----TOP 20----------------------------
+ [('book', 221761), ('good', 177737), ('like', 172000), ('one', 169991), ('great', 150161), ('would', 128765), ('really', 105017), ('get', 97690), ('read', 82247), ('little', 81152), ('well', 75484), ('it.', 75406), ('first', 72667), ('much', 71752), ('love', 65393), ('also', 63693), ('time', 61254), ('still', 60604), ('-', 59728), ('think', 59194)]
+-------------------- Dataset Grupo 5 ----TOP 20----------------------------
+ [('book', 229940), ('one', 180089), ('great', 170326), ('like', 132956), ('love', 106898), ('good', 97408), ('read', 96964), ('would', 90506), ('get', 86445), ('really', 84252), ('best', 78713), ('it.', 75618), ('first', 67708), ('well', 66328), ('time', 61279), ('also', 61206), ('much', 59402), ('even', 59366), ('many', 56313), ('recommend', 55904)]
+Count processing complete.
+multiprocesses time= 501.7530014514923
+**********************FIN**************************
