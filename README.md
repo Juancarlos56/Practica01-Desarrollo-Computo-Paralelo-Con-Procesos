@@ -26,3 +26,6 @@ Para obtener más información, consulte el siguiente artículo: J. McAuley and 
 
 
 
+### Realizado por: 
+- Juan Carlos Barrera B
+- Katherine Michelle Barrera B.
